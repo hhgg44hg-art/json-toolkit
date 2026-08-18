@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSON Toolkit - Format, Validate & Minify JSON</title>
+    <meta name="description" content="Free online JSON formatter, validator and minifier. Format, validate and compress JSON instantly in your browser.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <a href="index.html" class="logo">JSON Toolkit</a>
+
+        <nav>
+            <a href="#formatter">JSON Formatter</a>
+            <a href="#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="container">
+        <h1>Free JSON Formatter & Validator</h1>
+
+        <p>
+            Format, validate and minify JSON instantly.
+            Everything runs directly in your browser.
+        </p>
+    </div>
+</section>
+
+<section id="formatter" class="tool-section">
+    <div class="container">
+
+        <div class="tool-card">
+
+            <div class="toolbar">
+                <button id="formatBtn">Format JSON</button>
+                <button id="minifyBtn">Minify</button>
+                <button id="validateBtn">Validate</button>
+                <button id="clearBtn" class="secondary">Clear</button>
+            </div>
+
+            <textarea
+                id="jsonInput"
+                placeholder='Paste your JSON here...
+
+Example:
+{"name":"John","age":30,"city":"London"}'
+            ></textarea>
+
+            <div id="status" class="status"></div>
+
+            <div class="output-header">
+                <h2>Result</h2>
+                <button id="copyBtn" class="secondary">Copy</button>
+            </div>
+
+            <pre id="output"></pre>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="info-section">
+    <div class="container">
+
+        <h2>What is a JSON Formatter?</h2>
+
+        <p>
+            A JSON formatter makes JSON data easier to read by adding
+            indentation and organizing the structure.
+        </p>
+
+        <h2>Is this JSON tool free?</h2>
+
+        <p>
+            Yes. You can format, validate and minify JSON directly
+            in your browser.
+        </p>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 JSON Toolkit</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
