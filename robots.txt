@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hhgg44hg-art.github.io/json-toolkit/sitemap.xml
