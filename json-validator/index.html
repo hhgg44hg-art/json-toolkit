@@ -1,300 +1,599 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
-    <title>JSON Validator - Validate JSON Online Free | JSON Toolkit</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Validate JSON online for free. Check JSON syntax, find errors, and identify the line and column where invalid JSON occurs.">
+<title>
+    JSON Validator - Validate JSON Online Free | JSON Toolkit
+</title>
 
-    <meta name="robots" content="index, follow">
+<meta name="description"
+      content="Validate JSON online for free. Check JSON syntax, find errors, and identify the line and column where invalid JSON occurs.">
 
-    <link rel="canonical"
-          href="https://hhgg44hg-art.github.io/json-toolkit/json-validator/">
+<meta name="robots"
+      content="index, follow">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+<link rel="canonical"
+      href="https://hhgg44hg-art.github.io/json-toolkit/json-validator/">
 
-<body>
+<link rel="stylesheet"
+      href="style.css">
 
-<header class="site-header">
 
-    <div class="container nav">
+<style>
 
-        <a class="brand" href="../">
+    /* =========================
+       DARK MODE TOGGLE
+    ========================= */
+
+    .page-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .theme-toggle {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid #d1d5db;
+        border-radius: 50%;
+
+        background: #ffffff;
+        color: #111827;
+
+        cursor: pointer;
+
+        font-size: 18px;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    body.dark-mode {
+        background: #0f172a;
+        color: #e5e7eb;
+    }
+
+    body.dark-mode .site-header {
+        background: #111827;
+        border-color: #1f2937;
+    }
+
+    body.dark-mode .brand {
+        color: #f9fafb;
+    }
+
+    body.dark-mode nav a {
+        color: #cbd5e1;
+    }
+
+    body.dark-mode nav a:hover {
+        color: #ffffff;
+    }
+
+    body.dark-mode .theme-toggle {
+        background: #1f2937;
+        border-color: #374151;
+        color: #f9fafb;
+    }
+
+    body.dark-mode .hero h1,
+    body.dark-mode .hero h2,
+    body.dark-mode .content h2,
+    body.dark-mode .tool-header h2 {
+        color: #f9fafb;
+    }
+
+    body.dark-mode .hero p,
+    body.dark-mode .tool-header p,
+    body.dark-mode .content p,
+    body.dark-mode .content li {
+        color: #cbd5e1;
+    }
+
+    body.dark-mode .tool-card {
+        background: #111827;
+        border-color: #374151;
+    }
+
+    body.dark-mode textarea {
+        background: #0f172a;
+        color: #f9fafb;
+        border-color: #475569;
+    }
+
+    body.dark-mode .content {
+        background: #111827;
+    }
+
+    body.dark-mode .side-card {
+        background: #1f2937;
+        border-color: #374151;
+    }
+
+    body.dark-mode .side-card h3 {
+        color: #f9fafb;
+    }
+
+    body.dark-mode .side-card a {
+        color: #cbd5e1;
+    }
+
+    body.dark-mode .side-card a:hover {
+        color: #ffffff;
+    }
+
+    body.dark-mode footer {
+        background: #0b1120;
+        color: #94a3b8;
+    }
+
+
+    /* Validation result */
+
+    body.dark-mode .result {
+        background: #052e16;
+        border-color: #166534;
+    }
+
+    body.dark-mode .result h3 {
+        color: #bbf7d0;
+    }
+
+    body.dark-mode .result p {
+        color: #86efac;
+    }
+
+
+    /* Error box */
+
+    body.dark-mode .error-details {
+        background: #450a0a;
+        border-color: #991b1b;
+    }
+
+    body.dark-mode .error-details h3 {
+        color: #fecaca;
+    }
+
+    body.dark-mode .error-details pre {
+        color: #fca5a5;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        .page-header {
+            gap: 10px;
+        }
+
+        .theme-toggle {
+            width: 38px;
+            height: 38px;
+        }
+
+    }
+
+</style>
+
+</head><body><header class="site-header"><div class="container nav">
+
+
+    <div class="page-header">
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode">
+
+            🌙
+
+        </button>
+
+
+        <a class="brand"
+           href="../">
+
             JSON Toolkit
+
         </a>
 
-        <nav>
-            <a href="../">Home</a>
-            <a href="../json-formatter/">JSON Formatter</a>
-            <a href="./">JSON Validator</a>
-        </nav>
-
     </div>
 
-</header>
 
+    <nav>
 
-<main>
+        <a href="../">
+            Home
+        </a>
 
-<section class="hero">
+        <a href="../json-formatter/">
+            JSON Formatter
+        </a>
 
-    <div class="container">
-
-        <div class="badge">
-            Free Online Tool
-        </div>
-
-        <h1>
+        <a href="./">
             JSON Validator
-        </h1>
+        </a>
 
-        <p>
-            Validate JSON online instantly and find
-            syntax errors in your JSON data.
-        </p>
+        <a href="../json-minifier/">
+            JSON Minifier
+        </a>
 
+    </nav>
+
+
+</div>
+
+</header><main><section class="hero"><div class="container">
+
+    <div class="badge">
+        Free Online Tool
     </div>
 
-</section>
+
+    <h1>
+        JSON Validator
+    </h1>
 
 
-<section class="tool-section">
+    <p>
+        Validate JSON online instantly and find
+        syntax errors in your JSON data.
+    </p>
 
-    <div class="container">
+</div>
 
-        <div class="tool-card">
+</section><section class="tool-section"><div class="container">
 
-            <div class="tool-header">
+    <div class="tool-card">
 
-                <div>
 
-                    <h2>
-                        Validate your JSON
-                    </h2>
+        <div class="tool-header">
 
-                    <p>
-                        Paste your JSON below and check whether it is valid.
-                    </p>
+            <div>
 
-                </div>
+                <h2>
+                    Validate your JSON
+                </h2>
+
+                <p>
+                    Paste your JSON below and check
+                    whether it is valid.
+                </p>
 
             </div>
 
+        </div>
 
-            <textarea
-                id="jsonInput"
-                spellcheck="false"
-                placeholder='Paste JSON here...
+
+
+        <textarea
+            id="jsonInput"
+            spellcheck="false"
+            placeholder='Paste JSON here...
 
 Example:
 {
-  "name": "Hamoud",
-  "age": 22,
-  "active": true
+"name": "Hamoud",
+"age": 22,
+"active": true
 }'
-            ></textarea>
+></textarea>
+
+        <div class="actions">
+
+            <button id="validateBtn">
+                Validate JSON
+            </button>
 
 
-            <div class="actions">
+            <button
+                id="clearBtn"
+                class="secondary">
 
-                <button id="validateBtn">
-                    Validate JSON
-                </button>
+                Clear
 
-                <button id="clearBtn" class="secondary">
-                    Clear
-                </button>
-
-                <button id="exampleBtn" class="secondary">
-                    Load Example
-                </button>
-
-            </div>
+            </button>
 
 
-            <div id="result" class="result hidden">
+            <button
+                id="exampleBtn"
+                class="secondary">
 
-                <div id="resultIcon" class="result-icon">
-                    ✓
-                </div>
+                Load Example
 
-                <div>
-
-                    <h3 id="resultTitle">
-                        Valid JSON
-                    </h3>
-
-                    <p id="resultMessage">
-                        Your JSON is valid.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div id="errorDetails"
-                 class="error-details hidden">
-
-                <h3>
-                    Error Details
-                </h3>
-
-                <pre id="errorMessage"></pre>
-
-            </div>
+            </button>
 
         </div>
 
-    </div>
-
-</section>
 
 
-<section class="content">
-
-    <div class="container content-grid">
-
-        <article>
-
-            <h2>
-                What is a JSON Validator?
-            </h2>
-
-            <p>
-                A JSON Validator checks whether a JSON document
-                follows the correct JSON syntax. It can help identify
-                missing commas, incorrect quotation marks, missing
-                brackets, and other common JSON errors.
-            </p>
+        <div id="result"
+             class="result hidden">
 
 
-            <h2>
-                How to validate JSON
-            </h2>
+            <div id="resultIcon"
+                 class="result-icon">
 
-            <ol>
-
-                <li>
-                    Paste your JSON into the editor.
-                </li>
-
-                <li>
-                    Click <strong>Validate JSON</strong>.
-                </li>
-
-                <li>
-                    If the JSON is valid, you will see a success message.
-                </li>
-
-                <li>
-                    If it is invalid, the tool will display the
-                    JavaScript parsing error.
-                </li>
-
-            </ol>
-
-
-            <h2>
-                Common JSON errors
-            </h2>
-
-            <ul>
-
-                <li>
-                    Missing commas between properties.
-                </li>
-
-                <li>
-                    Using single quotes instead of double quotes.
-                </li>
-
-                <li>
-                    Missing closing brackets or braces.
-                </li>
-
-                <li>
-                    Adding an extra comma at the end of an object.
-                </li>
-
-                <li>
-                    Using invalid values or syntax.
-                </li>
-
-            </ul>
-
-
-            <h2>
-                Is this JSON Validator free?
-            </h2>
-
-            <p>
-                Yes. JSON Toolkit's JSON Validator is free to use
-                directly in your browser.
-            </p>
-
-
-            <h2>
-                Is my JSON uploaded?
-            </h2>
-
-            <p>
-                No. Validation is performed directly in your browser.
-                Your JSON is not sent to a server by this tool.
-            </p>
-
-        </article>
-
-
-        <aside>
-
-            <div class="side-card">
-
-                <h3>
-                    More JSON Tools
-                </h3>
-
-                <a href="../">
-                    JSON Toolkit
-                </a>
-
-                <a href="../json-formatter/">
-                    JSON Formatter
-                </a>
-
-                <a href="./">
-                    JSON Validator
-                </a>
+                ✓
 
             </div>
 
-        </aside>
+
+            <div>
+
+                <h3 id="resultTitle">
+                    Valid JSON
+                </h3>
+
+
+                <p id="resultMessage">
+                    Your JSON is valid.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div id="errorDetails"
+             class="error-details hidden">
+
+
+            <h3>
+                Error Details
+            </h3>
+
+
+            <pre id="errorMessage"></pre>
+
+
+        </div>
+
 
     </div>
 
-</section>
+</div>
 
-</main>
+</section><section class="content"><div class="container content-grid">
 
 
-<footer>
+    <article>
 
-    <div class="container">
+
+        <h2>
+            What is a JSON Validator?
+        </h2>
+
 
         <p>
-            © 2026 JSON Toolkit
+            A JSON Validator checks whether a JSON document
+            follows the correct JSON syntax. It can help identify
+            missing commas, incorrect quotation marks, missing
+            brackets, and other common JSON errors.
         </p>
 
-    </div>
-
-</footer>
 
 
-<script src="script.js"></script>
+        <h2>
+            How to validate JSON
+        </h2>
 
-</body>
-</html>
+
+        <ol>
+
+            <li>
+                Paste your JSON into the editor.
+            </li>
+
+            <li>
+                Click <strong>Validate JSON</strong>.
+            </li>
+
+            <li>
+                If the JSON is valid, you will see a
+                success message.
+            </li>
+
+            <li>
+                If it is invalid, the tool will display
+                the JavaScript parsing error.
+            </li>
+
+        </ol>
+
+
+
+        <h2>
+            Common JSON errors
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Missing commas between properties.
+            </li>
+
+            <li>
+                Using single quotes instead of double quotes.
+            </li>
+
+            <li>
+                Missing closing brackets or braces.
+            </li>
+
+            <li>
+                Adding an extra comma at the end of an object.
+            </li>
+
+            <li>
+                Using invalid values or syntax.
+            </li>
+
+        </ul>
+
+
+
+        <h2>
+            Is this JSON Validator free?
+        </h2>
+
+
+        <p>
+            Yes. JSON Toolkit's JSON Validator is free
+            to use directly in your browser.
+        </p>
+
+
+
+        <h2>
+            Is my JSON uploaded?
+        </h2>
+
+
+        <p>
+            No. Validation is performed directly in your
+            browser. Your JSON is not sent to a server
+            by this tool.
+        </p>
+
+
+    </article>
+
+
+
+    <aside>
+
+        <div class="side-card">
+
+            <h3>
+                More JSON Tools
+            </h3>
+
+
+            <a href="../">
+                JSON Toolkit
+            </a>
+
+
+            <a href="../json-formatter/">
+                JSON Formatter
+            </a>
+
+
+            <a href="./">
+                JSON Validator
+            </a>
+
+
+            <a href="../json-minifier/">
+                JSON Minifier
+            </a>
+
+
+        </div>
+
+    </aside>
+
+
+</div>
+
+</section></main><footer><div class="container">
+
+    <p>
+        © 2026 JSON Toolkit
+    </p>
+
+</div>
+
+</footer><script src="script.js"></script><script>
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    function setTheme(isDark) {
+
+        document.body.classList.toggle(
+            "dark-mode",
+            isDark
+        );
+
+
+        themeToggle.textContent =
+            isDark ? "☀️" : "🌙";
+
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+        );
+
+
+        themeToggle.setAttribute(
+            "title",
+            isDark
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+        );
+
+
+        localStorage.setItem(
+            "jsonToolkitDarkMode",
+            isDark ? "true" : "false"
+        );
+
+    }
+
+
+    const savedTheme =
+        localStorage.getItem(
+            "jsonToolkitDarkMode"
+        );
+
+
+    setTheme(savedTheme === "true");
+
+
+    themeToggle.addEventListener(
+        "click",
+        function () {
+
+            const isDark =
+                !document.body.classList.contains(
+                    "dark-mode"
+                );
+
+            setTheme(isDark);
+
+        }
+    );
+
+</script></body></html>
