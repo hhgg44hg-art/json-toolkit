@@ -1,26 +1,48 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>
     JSON Formatter - Format JSON Online Free | JSON Toolkit
-</title>
-
-<meta name="description"
-      content="Format and beautify JSON online for free. Validate JSON, format it with indentation, copy the result, and download your formatted JSON directly in your browser.">
+</title><meta name="description"
+content="Format and beautify JSON online for free. Validate JSON, format it with indentation, copy the result, and download your formatted JSON directly in your browser.">
 
 <meta name="robots"
-      content="index, follow">
+content="index, follow">
 
 <link rel="canonical"
-      href="https://hhgg44hg-art.github.io/json-toolkit/json-formatter/">
+      href="https://hhgg44hg-art.github.io/json-toolkit/json-formatter/"><link rel="stylesheet"
+      href="style.css"><style>
 
-<link rel="stylesheet"
-      href="style.css">
+    /* =========================
+       AD PLACEHOLDERS
+    ========================= */
 
+    .ad-placeholder {
+        width: 100%;
+        min-height: 90px;
 
-<style>
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 28px auto;
+
+        border: 1px dashed #9ca3af;
+        border-radius: 12px;
+
+        background: #f3f4f6;
+        color: #6b7280;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            border-color 0.25s ease;
+    }
+
 
     /* =========================
        DARK MODE TOGGLE
@@ -66,91 +88,178 @@
     ========================= */
 
     body.dark-mode {
-        background: #0f172a;
+        background: #0f172a !important;
         color: #e5e7eb;
     }
 
+    body.dark-mode main {
+        background: #0f172a !important;
+    }
+
     body.dark-mode .site-header {
-        background: #111827;
-        border-color: #1f2937;
+        background: #111827 !important;
+        border-color: #1f2937 !important;
     }
 
     body.dark-mode .brand {
-        color: #f9fafb;
+        color: #f9fafb !important;
     }
 
     body.dark-mode nav a {
-        color: #cbd5e1;
+        color: #cbd5e1 !important;
     }
 
     body.dark-mode nav a:hover {
-        color: #ffffff;
+        color: #ffffff !important;
     }
 
     body.dark-mode .theme-toggle {
-        background: #1f2937;
-        border-color: #374151;
-        color: #f9fafb;
+        background: #1f2937 !important;
+        border-color: #374151 !important;
+        color: #f9fafb !important;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    body.dark-mode .hero {
+        background: #0f172a !important;
     }
 
     body.dark-mode .hero h1,
-    body.dark-mode .hero h2,
-    body.dark-mode .content h2,
-    body.dark-mode .tool-header h2,
-    body.dark-mode .result-header h2 {
-        color: #f9fafb;
+    body.dark-mode .hero h2 {
+        color: #f9fafb !important;
     }
 
-    body.dark-mode .hero p,
-    body.dark-mode .tool-header p,
-    body.dark-mode .content p,
-    body.dark-mode .content li,
-    body.dark-mode .indent-control label {
-        color: #cbd5e1;
+    body.dark-mode .hero p {
+        color: #cbd5e1 !important;
+    }
+
+    body.dark-mode .badge {
+        background: #1e293b !important;
+        color: #a5b4fc !important;
+    }
+
+
+    /* =========================
+       TOOL SECTION
+    ========================= */
+
+    body.dark-mode .tool-section {
+        background: #0f172a !important;
+    }
+
+    body.dark-mode .tool-section .container {
+        background: #0f172a !important;
     }
 
     body.dark-mode .tool-card {
-        background: #111827;
-        border-color: #374151;
+        background: #111827 !important;
+        border-color: #374151 !important;
+        color: #e5e7eb !important;
     }
+
+    body.dark-mode .tool-header h2,
+    body.dark-mode .result-header h2 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .tool-header p,
+    body.dark-mode .indent-control label {
+        color: #cbd5e1 !important;
+    }
+
+
+    /* =========================
+       INPUT / OUTPUT
+    ========================= */
 
     body.dark-mode textarea,
     body.dark-mode #output {
-        background: #0f172a;
-        color: #f9fafb;
-        border-color: #475569;
+        background: #0f172a !important;
+        color: #f9fafb !important;
+        border-color: #475569 !important;
+    }
+
+    body.dark-mode textarea::placeholder {
+        color: #64748b !important;
     }
 
     body.dark-mode select {
-        background: #1f2937;
-        color: #f9fafb;
-        border-color: #475569;
+        background: #1f2937 !important;
+        color: #f9fafb !important;
+        border-color: #475569 !important;
     }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
 
     body.dark-mode .content {
-        background: #111827;
+        background: #111827 !important;
     }
 
+    body.dark-mode .content .container {
+        background: #111827 !important;
+    }
+
+    body.dark-mode .content h2 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .content p,
+    body.dark-mode .content li {
+        color: #cbd5e1 !important;
+    }
+
+    body.dark-mode .content strong {
+        color: #f9fafb !important;
+    }
+
+
+    /* =========================
+       SIDE CARD
+    ========================= */
+
     body.dark-mode .side-card {
-        background: #1f2937;
-        border-color: #374151;
+        background: #1f2937 !important;
+        border-color: #374151 !important;
     }
 
     body.dark-mode .side-card h3 {
-        color: #f9fafb;
+        color: #f9fafb !important;
     }
 
     body.dark-mode .side-card a {
-        color: #cbd5e1;
+        color: #cbd5e1 !important;
     }
 
     body.dark-mode .side-card a:hover {
-        color: #ffffff;
+        color: #ffffff !important;
     }
 
+
+    /* =========================
+       ADS
+    ========================= */
+
+    body.dark-mode .ad-placeholder {
+        background: #1f2937 !important;
+        border-color: #475569 !important;
+        color: #94a3b8 !important;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     body.dark-mode footer {
-        background: #0b1120;
-        color: #94a3b8;
+        background: #0b1120 !important;
+        color: #94a3b8 !important;
     }
 
 
@@ -169,390 +278,377 @@
             height: 38px;
         }
 
+        .ad-placeholder {
+            min-height: 75px;
+        }
+
     }
 
-</style>
+</style></head><body><header class="site-header"><div class="container nav"><div class="page-header">
 
-</head><body><header class="site-header"><div class="container nav">
+    <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        title="Toggle dark mode">
 
+        🌙
 
-    <div class="page-header">
-
-        <button
-            id="themeToggle"
-            class="theme-toggle"
-            type="button"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode">
-
-            🌙
-
-        </button>
+    </button>
 
 
-        <a class="brand"
-           href="../">
+    <a class="brand"
+       href="../">
 
-            JSON Toolkit
+        JSON Toolkit
 
-        </a>
-
-    </div>
-
-
-    <nav>
-
-        <a href="../">
-            Home
-        </a>
-
-        <a href="./">
-            JSON Formatter
-        </a>
-
-        <a href="../json-validator/">
-            JSON Validator
-        </a>
-
-        <a href="../json-minifier/">
-            JSON Minifier
-        </a>
-
-    </nav>
-
+    </a>
 
 </div>
 
-</header><main><section class="hero"><div class="container">
 
-    <div class="badge">
-        Free Online Tool
-    </div>
+<nav>
 
+    <a href="../">
+        Home
+    </a>
 
-    <h1>
+    <a href="./">
         JSON Formatter
-    </h1>
+    </a>
 
+    <a href="../json-validator/">
+        JSON Validator
+    </a>
 
-    <p>
-        Format and beautify JSON online instantly.
-        Validate your JSON and make it easier to read.
-    </p>
+    <a href="../json-minifier/">
+        JSON Minifier
+    </a>
 
+</nav>
+
+</div></header><main><section class="hero"><div class="container"><div class="badge">
+    Free Online Tool
 </div>
 
-</section><section class="tool-section"><div class="container">
 
-    <div class="tool-card">
-
-
-        <div class="tool-header">
-
-            <div>
-
-                <h2>
-                    Format your JSON
-                </h2>
-
-                <p>
-                    Paste your JSON below and choose
-                    an indentation level.
-                </p>
-
-            </div>
+<h1>
+    JSON Formatter
+</h1>
 
 
-            <div class="indent-control">
+<p>
+    Format and beautify JSON online instantly.
+    Validate your JSON and make it easier to read.
+</p>
 
-                <label for="indent">
-                    Indentation
-                </label>
+</div></section><!-- AD #1 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">AD
 
-                <select id="indent">
+</div></div><section class="tool-section"><div class="container"><div class="tool-card">
 
-                    <option value="2">
-                        2 spaces
-                    </option>
 
-                    <option value="4">
-                        4 spaces
-                    </option>
+    <div class="tool-header">
 
-                    <option value="1">
-                        1 space
-                    </option>
+        <div>
 
-                    <option value="tab">
-                        Tab
-                    </option>
+            <h2>
+                Format your JSON
+            </h2>
 
-                </select>
-
-            </div>
+            <p>
+                Paste your JSON below and choose
+                an indentation level.
+            </p>
 
         </div>
 
 
+        <div class="indent-control">
 
-        <textarea
-            id="jsonInput"
-            spellcheck="false"
-            placeholder='Paste JSON here...
+            <label for="indent">
+                Indentation
+            </label>
+
+            <select id="indent">
+
+                <option value="2">
+                    2 spaces
+                </option>
+
+                <option value="4">
+                    4 spaces
+                </option>
+
+                <option value="1">
+                    1 space
+                </option>
+
+                <option value="tab">
+                    Tab
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    <textarea
+        id="jsonInput"
+        spellcheck="false"
+        placeholder='Paste JSON here...
 
 Example:
 {"name":"John","age":30,"active":true}'
 ></textarea>
 
-        <div class="actions">
+    <div class="actions">
 
-            <button id="formatBtn">
-                Format JSON
-            </button>
+        <button id="formatBtn">
+            Format JSON
+        </button>
+
+        <button
+            id="validateBtn"
+            class="secondary">
+
+            Validate
+
+        </button>
+
+        <button
+            id="clearBtn"
+            class="secondary">
+
+            Clear
+
+        </button>
+
+    </div>
+
+
+
+    <div id="status"
+         class="status">
+    </div>
+
+
+
+    <div class="result-header">
+
+        <h2>
+            Formatted JSON
+        </h2>
+
+
+        <div class="result-actions">
 
             <button
-                id="validateBtn"
+                id="copyBtn"
                 class="secondary">
 
-                Validate
+                Copy
 
             </button>
+
 
             <button
-                id="clearBtn"
+                id="downloadBtn"
                 class="secondary">
 
-                Clear
+                Download
 
             </button>
 
         </div>
 
-
-
-        <div id="status"
-             class="status">
-        </div>
+    </div>
 
 
 
-        <div class="result-header">
-
-            <h2>
-                Formatted JSON
-            </h2>
+    <pre id="output"></pre>
 
 
-            <div class="result-actions">
+</div>
 
-                <button
-                    id="copyBtn"
-                    class="secondary">
+</div></section><!-- AD #2 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">AD
 
-                    Copy
-
-                </button>
+</div></div><section class="content"><div class="container content-grid"><article>
 
 
-                <button
-                    id="downloadBtn"
-                    class="secondary">
+    <h2>
+        What is a JSON Formatter?
+    </h2>
 
-                    Download
 
-                </button>
-
-            </div>
-
-        </div>
+    <p>
+        A JSON formatter converts compact or
+        difficult-to-read JSON data into a structured
+        format with indentation and line breaks.
+        This makes JSON easier to inspect, debug,
+        and understand.
+    </p>
 
 
 
-        <pre id="output"></pre>
+    <h2>
+        How to format JSON
+    </h2>
+
+
+    <ol>
+
+        <li>
+            Paste your JSON into the editor.
+        </li>
+
+        <li>
+            Choose the indentation level.
+        </li>
+
+        <li>
+            Click <strong>Format JSON</strong>.
+        </li>
+
+        <li>
+            Copy or download the formatted result.
+        </li>
+
+    </ol>
+
+
+
+    <h2>
+        Is this JSON formatter free?
+    </h2>
+
+
+    <p>
+        Yes. The tool is free to use and processes
+        your JSON directly in your browser.
+    </p>
+
+
+
+    <h2>
+        Is my JSON uploaded to a server?
+    </h2>
+
+
+    <p>
+        No. Formatting is performed locally in your
+        browser. Your JSON is not sent to our server
+        by this tool.
+    </p>
+
+
+</article>
+
+
+
+<aside>
+
+    <div class="side-card">
+
+        <h3>
+            More JSON Tools
+        </h3>
+
+
+        <a href="../">
+            JSON Toolkit
+        </a>
+
+
+        <a href="../json-validator/">
+            JSON Validator
+        </a>
+
+
+        <a href="../json-minifier/">
+            JSON Minifier
+        </a>
 
 
     </div>
 
-</div>
+</aside>
 
-</section><section class="content"><div class="container content-grid">
+</div></section><!-- AD #3 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">AD
 
+</div></div></main><footer><div class="container"><p>
+    © 2026 JSON Toolkit
+</p>
 
-    <article>
+</div></footer><script src="script.js"></script><script>
 
-
-        <h2>
-            What is a JSON Formatter?
-        </h2>
-
-
-        <p>
-            A JSON formatter converts compact or
-            difficult-to-read JSON data into a structured
-            format with indentation and line breaks.
-            This makes JSON easier to inspect, debug,
-            and understand.
-        </p>
+const themeToggle =
+    document.getElementById("themeToggle");
 
 
+function setTheme(isDark) {
 
-        <h2>
-            How to format JSON
-        </h2>
-
-
-        <ol>
-
-            <li>
-                Paste your JSON into the editor.
-            </li>
-
-            <li>
-                Choose the indentation level.
-            </li>
-
-            <li>
-                Click <strong>Format JSON</strong>.
-            </li>
-
-            <li>
-                Copy or download the formatted result.
-            </li>
-
-        </ol>
+    document.body.classList.toggle(
+        "dark-mode",
+        isDark
+    );
 
 
-
-        <h2>
-            Is this JSON formatter free?
-        </h2>
+    themeToggle.textContent =
+        isDark ? "☀️" : "🌙";
 
 
-        <p>
-            Yes. The tool is free to use and processes
-            your JSON directly in your browser.
-        </p>
+    themeToggle.setAttribute(
+        "aria-label",
+        isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+    );
 
 
-
-        <h2>
-            Is my JSON uploaded to a server?
-        </h2>
-
-
-        <p>
-            No. Formatting is performed locally in your
-            browser. Your JSON is not sent to our server
-            by this tool.
-        </p>
+    themeToggle.setAttribute(
+        "title",
+        isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+    );
 
 
-    </article>
+    localStorage.setItem(
+        "jsonToolkitDarkMode",
+        isDark ? "true" : "false"
+    );
+
+}
 
 
-
-    <aside>
-
-        <div class="side-card">
-
-            <h3>
-                More JSON Tools
-            </h3>
+const savedTheme =
+    localStorage.getItem(
+        "jsonToolkitDarkMode"
+    );
 
 
-            <a href="../">
-                JSON Toolkit
-            </a>
+setTheme(savedTheme === "true");
 
 
-            <a href="../json-validator/">
-                JSON Validator
-            </a>
+themeToggle.addEventListener(
+    "click",
+    function () {
 
+        const isDark =
+            !document.body.classList.contains(
+                "dark-mode"
+            );
 
-            <a href="../json-minifier/">
-                JSON Minifier
-            </a>
-
-
-        </div>
-
-    </aside>
-
-
-</div>
-
-</section></main><footer><div class="container">
-
-    <p>
-        © 2026 JSON Toolkit
-    </p>
-
-</div>
-
-</footer><script src="script.js"></script><script>
-
-    const themeToggle =
-        document.getElementById("themeToggle");
-
-
-    function setTheme(isDark) {
-
-        document.body.classList.toggle(
-            "dark-mode",
-            isDark
-        );
-
-
-        themeToggle.textContent =
-            isDark ? "☀️" : "🌙";
-
-
-        themeToggle.setAttribute(
-            "aria-label",
-            isDark
-                ? "Switch to light mode"
-                : "Switch to dark mode"
-        );
-
-
-        themeToggle.setAttribute(
-            "title",
-            isDark
-                ? "Switch to light mode"
-                : "Switch to dark mode"
-        );
-
-
-        localStorage.setItem(
-            "jsonToolkitDarkMode",
-            isDark ? "true" : "false"
-        );
+        setTheme(isDark);
 
     }
-
-
-    const savedTheme =
-        localStorage.getItem(
-            "jsonToolkitDarkMode"
-        );
-
-
-    setTheme(savedTheme === "true");
-
-
-    themeToggle.addEventListener(
-        "click",
-        function () {
-
-            const isDark =
-                !document.body.classList.contains(
-                    "dark-mode"
-                );
-
-            setTheme(isDark);
-
-        }
-    );
+);
 
 </script></body></html>
