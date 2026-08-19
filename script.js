@@ -5,7 +5,12 @@ const status = document.getElementById("status");
 function parseJSON() {
     try {
         const data = JSON.parse(input.value);
-        return { success: true, data };
+
+        return {
+            success: true,
+            data: data
+        };
+
     } catch (error) {
         return {
             success: false,
@@ -14,60 +19,124 @@ function parseJSON() {
     }
 }
 
-document.getElementById("formatBtn").addEventListener("click", () => {
 
-    const result = parseJSON();
+/* Format */
 
-    if (!result.success) {
-        status.textContent = "Invalid JSON: " + result.error;
+const formatBtn = document.getElementById("formatBtn");
+
+if (formatBtn) {
+    formatBtn.addEventListener("click", () => {
+
+        const result = parseJSON();
+
+        if (!result.success) {
+            status.textContent =
+                "Invalid JSON: " + result.error;
+
+            output.textContent = "";
+            return;
+        }
+
+        output.textContent =
+            JSON.stringify(result.data, null, 2);
+
+        status.textContent =
+            "Valid JSON ✓";
+    });
+}
+
+
+/* Minify */
+
+const minifyBtn = document.getElementById("minifyBtn");
+
+if (minifyBtn) {
+    minifyBtn.addEventListener("click", () => {
+
+        const result = parseJSON();
+
+        if (!result.success) {
+            status.textContent =
+                "Invalid JSON: " + result.error;
+
+            output.textContent = "";
+            return;
+        }
+
+        output.textContent =
+            JSON.stringify(result.data);
+
+        status.textContent =
+            "JSON minified successfully ✓";
+    });
+}
+
+
+/* Validate */
+
+const validateBtn = document.getElementById("validateBtn");
+
+if (validateBtn) {
+    validateBtn.addEventListener("click", () => {
+
+        const result = parseJSON();
+
+        if (!result.success) {
+            status.textContent =
+                "Invalid JSON: " + result.error;
+
+            output.textContent = "";
+            return;
+        }
+
+        status.textContent =
+            "Valid JSON ✓";
+
+        output.textContent =
+            "Your JSON is valid.";
+    });
+}
+
+
+/* Clear */
+
+const clearBtn = document.getElementById("clearBtn");
+
+if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+
+        input.value = "";
         output.textContent = "";
-        return;
-    }
+        status.textContent = "";
+    });
+}
 
-    output.textContent = JSON.stringify(result.data, null, 2);
-    status.textContent = "Valid JSON ✓";
-});
 
-document.getElementById("minifyBtn").addEventListener("click", () => {
+/* Copy */
 
-    const result = parseJSON();
+const copyBtn = document.getElementById("copyBtn");
 
-    if (!result.success) {
-        status.textContent = "Invalid JSON: " + result.error;
-        output.textContent = "";
-        return;
-    }
+if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
 
-    output.textContent = JSON.stringify(result.data);
-    status.textContent = "JSON minified successfully ✓";
-});
+        if (!output.textContent) {
+            return;
+        }
 
-document.getElementById("validateBtn").addEventListener("click", () => {
+        try {
 
-    const result = parseJSON();
+            await navigator.clipboard.writeText(
+                output.textContent
+            );
 
-    if (!result.success) {
-        status.textContent = "Invalid JSON: " + result.error;
-        output.textContent = "";
-        return;
-    }
+            status.textContent =
+                "Copied to clipboard ✓";
 
-    status.textContent = "Valid JSON ✓";
-    output.textContent = "Your JSON is valid.";
-});
+        } catch (error) {
 
-document.getElementById("clearBtn").addEventListener("click", () => {
+            status.textContent =
+                "Unable to copy automatically.";
 
-    input.value = "";
-    output.textContent = "";
-    status.textContent = "";
-});
-
-document.getElementById("copyBtn").addEventListener("click", async () => {
-
-    if (!output.textContent) return;
-
-    await navigator.clipboard.writeText(output.textContent);
-
-    status.textContent = "Copied to clipboard ✓";
-});
+        }
+    });
+}
