@@ -1,30 +1,19 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>
     JSON Minifier - Minify JSON Online Free | JSON Toolkit
-</title>
-
-<meta name="description"
-      content="Minify and compress JSON online for free. Remove unnecessary spaces and formatting from JSON directly in your browser.">
+</title><meta name="description"
+content="Minify and compress JSON online for free. Remove unnecessary spaces and formatting from JSON directly in your browser.">
 
 <meta name="robots"
-      content="index, follow">
+content="index, follow">
 
 <link rel="canonical"
-      href="https://hhgg44hg-art.github.io/json-toolkit/json-minifier/">
-
-<link rel="stylesheet"
-      href="style.css">
-
-
-<style>
-
-    /* =========================
-       DARK MODE TOGGLE
-    ========================= */
+      href="https://hhgg44hg-art.github.io/json-toolkit/json-minifier/"><link rel="stylesheet"
+      href="style.css"><style>
 
     .page-header {
         display: flex;
@@ -47,7 +36,6 @@
         color: #111827;
 
         cursor: pointer;
-
         font-size: 18px;
 
         transition:
@@ -66,25 +54,25 @@
     ========================= */
 
     body.dark-mode {
-        background: #0f172a;
+        background: #0f172a !important;
         color: #e5e7eb;
     }
 
     body.dark-mode .site-header {
-        background: #111827;
-        border-color: #1f2937;
+        background: #111827 !important;
+        border-color: #1f2937 !important;
     }
 
     body.dark-mode .brand {
-        color: #f9fafb;
+        color: #f9fafb !important;
     }
 
     body.dark-mode nav a {
-        color: #cbd5e1;
+        color: #cbd5e1 !important;
     }
 
     body.dark-mode nav a:hover {
-        color: #ffffff;
+        color: #ffffff !important;
     }
 
     body.dark-mode .theme-toggle {
@@ -93,126 +81,153 @@
         color: #f9fafb;
     }
 
-    body.dark-mode .hero h1,
-    body.dark-mode .hero h2,
-    body.dark-mode .content h2,
-    body.dark-mode .tool-header h2,
-    body.dark-mode .output-header h3 {
-        color: #f9fafb;
+
+    /* Hero */
+
+    body.dark-mode .hero {
+        background: #0f172a !important;
     }
 
-    body.dark-mode .hero p,
-    body.dark-mode .tool-header p,
-    body.dark-mode .content p,
-    body.dark-mode .content li {
-        color: #cbd5e1;
+    body.dark-mode .hero h1,
+    body.dark-mode .hero h2 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .hero p {
+        color: #cbd5e1 !important;
+    }
+
+    body.dark-mode .badge {
+        background: #1e293b !important;
+        color: #a5b4fc !important;
+    }
+
+
+    /* Tool */
+
+    body.dark-mode .tool-section {
+        background: #0f172a !important;
     }
 
     body.dark-mode .tool-card {
-        background: #111827;
-        border-color: #374151;
+        background: #111827 !important;
+        border-color: #374151 !important;
     }
 
-    body.dark-mode textarea {
-        background: #0f172a;
-        color: #f9fafb;
-        border-color: #475569;
+    body.dark-mode .tool-header h2,
+    body.dark-mode .output-header h3 {
+        color: #f9fafb !important;
     }
 
+    body.dark-mode .tool-header p {
+        color: #cbd5e1 !important;
+    }
+
+    body.dark-mode textarea,
     body.dark-mode #output {
-        background: #0f172a;
-        color: #f9fafb;
-        border-color: #475569;
-    }
-
-    body.dark-mode .content {
-        background: #111827;
-    }
-
-    body.dark-mode .side-card {
-        background: #1f2937;
-        border-color: #374151;
-    }
-
-    body.dark-mode .side-card h3 {
-        color: #f9fafb;
-    }
-
-    body.dark-mode .side-card a {
-        color: #cbd5e1;
-    }
-
-    body.dark-mode .side-card a:hover {
-        color: #ffffff;
-    }
-
-    body.dark-mode footer {
-        background: #0b1120;
-        color: #94a3b8;
+        background: #0f172a !important;
+        color: #f9fafb !important;
+        border-color: #475569 !important;
     }
 
 
-    /* =========================
-       RESULT
-    ========================= */
+    /* Result */
 
     body.dark-mode .result {
-        background: #052e16;
-        border-color: #166534;
+        background: #052e16 !important;
+        border-color: #166534 !important;
     }
 
     body.dark-mode .result h3 {
-        color: #bbf7d0;
+        color: #bbf7d0 !important;
     }
 
     body.dark-mode .result p {
-        color: #86efac;
+        color: #86efac !important;
     }
 
 
-    /* =========================
-       ERROR
-    ========================= */
+    /* Error */
 
     body.dark-mode .error-details {
-        background: #450a0a;
-        border-color: #991b1b;
+        background: #450a0a !important;
+        border-color: #991b1b !important;
     }
 
     body.dark-mode .error-details h3 {
-        color: #fecaca;
+        color: #fecaca !important;
     }
 
     body.dark-mode .error-details pre {
-        color: #fca5a5;
+        color: #fca5a5 !important;
     }
 
 
-    /* =========================
-       STATS
-    ========================= */
+    /* Stats */
 
     body.dark-mode .stats {
-        border-color: #374151;
+        border-color: #374151 !important;
     }
 
     body.dark-mode .stat {
-        background: #1f2937;
-        border-color: #374151;
+        background: #1f2937 !important;
+        border-color: #374151 !important;
     }
 
     body.dark-mode .stat span {
-        color: #94a3b8;
+        color: #94a3b8 !important;
     }
 
     body.dark-mode .stat strong {
-        color: #f9fafb;
+        color: #f9fafb !important;
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* Content */
+
+    body.dark-mode .content {
+        background: #111827 !important;
+    }
+
+    body.dark-mode .content h2 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .content p,
+    body.dark-mode .content li {
+        color: #cbd5e1 !important;
+    }
+
+
+    /* Side card */
+
+    body.dark-mode .side-card {
+        background: #1f2937 !important;
+        border-color: #374151 !important;
+    }
+
+    body.dark-mode .side-card h3 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .side-card a {
+        color: #cbd5e1 !important;
+    }
+
+    body.dark-mode .side-card a:hover {
+        color: #ffffff !important;
+    }
+
+
+    /* Footer */
+
+    body.dark-mode footer {
+        background: #0b1120 !important;
+        color: #94a3b8 !important;
+    }
+
+
+    /* Mobile */
 
     @media (max-width: 700px) {
 
@@ -227,39 +242,300 @@
 
     }
 
-</style>
+</style></head><body><header class="site-header"><div class="container nav"><div class="page-header">
 
-</head><body><header class="site-header"><div class="container nav">
+    <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        title="Toggle dark mode">
+
+        🌙
+
+    </button>
+
+    <a class="brand"
+       href="../">
+
+        JSON Toolkit
+
+    </a>
+
+</div>
 
 
-    <div class="page-header">
+<nav>
 
-        <button
-            id="themeToggle"
-            class="theme-toggle"
-            type="button"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode">
+    <a href="../">
+        Home
+    </a>
 
-            🌙
+    <a href="../json-formatter/">
+        JSON Formatter
+    </a>
 
-        </button>
+    <a href="../json-validator/">
+        JSON Validator
+    </a>
 
+    <a href="./">
+        JSON Minifier
+    </a>
 
-        <a class="brand"
-           href="../">
+</nav>
 
-            JSON Toolkit
+</div></header><main><section class="hero"><div class="container"><div class="badge">
+    Free Online Tool
+</div>
 
-        </a>
+<h1>
+    JSON Minifier
+</h1>
+
+<p>
+    Minify and compress JSON online by removing
+    unnecessary spaces and formatting.
+</p>
+
+</div></section><section class="tool-section"><div class="container"><div class="tool-card">
+
+    <div class="tool-header">
+
+        <h2>
+            Minify your JSON
+        </h2>
+
+        <p>
+            Paste your JSON below and remove
+            unnecessary whitespace.
+        </p>
 
     </div>
 
 
-    <nav>
+    <textarea
+        id="jsonInput"
+        spellcheck="false"
+        placeholder='Paste JSON here...
+
+Example:
+{
+"name": "Hamoud",
+"age": 22,
+"active": true
+}'
+
+«</textarea>»
+
+    <div class="actions">
+
+        <button id="minifyBtn">
+            Minify JSON
+        </button>
+
+        <button
+            id="clearBtn"
+            class="secondary">
+
+            Clear
+
+        </button>
+
+        <button
+            id="exampleBtn"
+            class="secondary">
+
+            Load Example
+
+        </button>
+
+    </div>
+
+
+    <div id="result"
+         class="result hidden">
+
+        <div>
+
+            <h3 id="resultTitle">
+                JSON Minified
+            </h3>
+
+            <p id="resultMessage">
+                Your JSON has been successfully
+                minified.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="outputSection"
+         class="output-section hidden">
+
+        <div class="output-header">
+
+            <h3>
+                Minified JSON
+            </h3>
+
+            <button
+                id="copyBtn"
+                class="copy-button">
+
+                Copy
+
+            </button>
+
+        </div>
+
+
+        <textarea
+            id="output"
+            readonly
+            spellcheck="false"
+        ></textarea>
+
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <span>
+                    Original size
+                </span>
+
+                <strong id="originalSize">
+                    0 bytes
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Minified size
+                </span>
+
+                <strong id="minifiedSize">
+                    0 bytes
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Space saved
+                </span>
+
+                <strong id="savedSize">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="errorDetails"
+         class="error-details hidden">
+
+        <h3>
+            Invalid JSON
+        </h3>
+
+        <pre id="errorMessage"></pre>
+
+    </div>
+
+</div>
+
+</div></section><section class="content"><div class="container content-grid"><article>
+
+    <h2>
+        What is JSON Minification?
+    </h2>
+
+    <p>
+        JSON minification removes unnecessary whitespace,
+        line breaks, and indentation from JSON data while
+        keeping the data itself unchanged.
+    </p>
+
+
+    <h2>
+        Why minify JSON?
+    </h2>
+
+    <p>
+        Smaller JSON files can reduce the amount of data
+        transferred between applications and servers.
+        This can be useful for APIs, configuration files,
+        and web applications.
+    </p>
+
+
+    <h2>
+        How to minify JSON
+    </h2>
+
+    <ol>
+
+        <li>
+            Paste your JSON into the input box.
+        </li>
+
+        <li>
+            Click <strong>Minify JSON</strong>.
+        </li>
+
+        <li>
+            Copy the compressed JSON.
+        </li>
+
+    </ol>
+
+
+    <h2>
+        Is this JSON Minifier free?
+    </h2>
+
+    <p>
+        Yes. JSON Toolkit's JSON Minifier is free
+        to use directly in your browser.
+    </p>
+
+
+    <h2>
+        Is my JSON uploaded?
+    </h2>
+
+    <p>
+        No. The JSON is processed directly in your
+        browser. Your data does not need to be uploaded
+        to a server.
+    </p>
+
+</article>
+
+
+<aside>
+
+    <div class="side-card">
+
+        <h3>
+            More JSON Tools
+        </h3>
 
         <a href="../">
-            Home
+            JSON Toolkit
         </a>
 
         <a href="../json-formatter/">
@@ -274,407 +550,74 @@
             JSON Minifier
         </a>
 
-    </nav>
-
-
-</div>
-
-</header><main><section class="hero"><div class="container">
-
-    <div class="badge">
-        Free Online Tool
     </div>
 
+</aside>
 
-    <h1>
-        JSON Minifier
-    </h1>
+</div></section></main><footer><div class="container"><p>
+    © 2026 JSON Toolkit
+</p>
 
+</div></footer><script src="script.js"></script><script>
 
-    <p>
-        Minify and compress JSON online by removing
-        unnecessary spaces and formatting.
-    </p>
+const themeToggle =
+    document.getElementById("themeToggle");
 
-</div>
 
-</section><section class="tool-section"><div class="container">
+function setTheme(isDark) {
 
-    <div class="tool-card">
-
-
-        <div class="tool-header">
-
-            <h2>
-                Minify your JSON
-            </h2>
-
-
-            <p>
-                Paste your JSON below and remove
-                unnecessary whitespace.
-            </p>
-
-        </div>
-
-
-
-        <textarea
-            id="jsonInput"
-            spellcheck="false"
-            placeholder='Paste JSON here...
-
-Example:
-{
-"name": "Hamoud",
-"age": 22,
-"active": true
-}'
-></textarea>
-
-        <div class="actions">
-
-            <button id="minifyBtn">
-                Minify JSON
-            </button>
-
-
-            <button
-                id="clearBtn"
-                class="secondary">
-
-                Clear
-
-            </button>
-
-
-            <button
-                id="exampleBtn"
-                class="secondary">
-
-                Load Example
-
-            </button>
-
-        </div>
-
-
-
-        <div id="result"
-             class="result hidden">
-
-
-            <div>
-
-                <h3 id="resultTitle">
-                    JSON Minified
-                </h3>
-
-
-                <p id="resultMessage">
-                    Your JSON has been successfully
-                    minified.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div id="outputSection"
-             class="output-section hidden">
-
-
-            <div class="output-header">
-
-                <h3>
-                    Minified JSON
-                </h3>
-
-
-                <button
-                    id="copyBtn"
-                    class="copy-button">
-
-                    Copy
-
-                </button>
-
-            </div>
-
-
-
-            <textarea
-                id="output"
-                readonly
-                spellcheck="false"
-            ></textarea>
-
-
-
-            <div class="stats">
-
-
-                <div class="stat">
-
-                    <span>
-                        Original size
-                    </span>
-
-                    <strong id="originalSize">
-                        0 bytes
-                    </strong>
-
-                </div>
-
-
-
-                <div class="stat">
-
-                    <span>
-                        Minified size
-                    </span>
-
-                    <strong id="minifiedSize">
-                        0 bytes
-                    </strong>
-
-                </div>
-
-
-
-                <div class="stat">
-
-                    <span>
-                        Space saved
-                    </span>
-
-                    <strong id="savedSize">
-                        0%
-                    </strong>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <div id="errorDetails"
-             class="error-details hidden">
-
-
-            <h3>
-                Invalid JSON
-            </h3>
-
-
-            <pre id="errorMessage"></pre>
-
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section><section class="content"><div class="container content-grid">
-
-
-    <article>
-
-
-        <h2>
-            What is JSON Minification?
-        </h2>
-
-
-        <p>
-            JSON minification removes unnecessary whitespace,
-            line breaks, and indentation from JSON data while
-            keeping the data itself unchanged.
-        </p>
-
-
-
-        <h2>
-            Why minify JSON?
-        </h2>
-
-
-        <p>
-            Smaller JSON files can reduce the amount of data
-            transferred between applications and servers.
-            This can be useful for APIs, configuration files,
-            and web applications.
-        </p>
-
-
-
-        <h2>
-            How to minify JSON
-        </h2>
-
-
-        <ol>
-
-            <li>
-                Paste your JSON into the input box.
-            </li>
-
-            <li>
-                Click <strong>Minify JSON</strong>.
-            </li>
-
-            <li>
-                Copy the compressed JSON.
-            </li>
-
-        </ol>
-
-
-
-        <h2>
-            Is this JSON Minifier free?
-        </h2>
-
-
-        <p>
-            Yes. JSON Toolkit's JSON Minifier is free
-            to use directly in your browser.
-        </p>
-
-
-
-        <h2>
-            Is my JSON uploaded?
-        </h2>
-
-
-        <p>
-            No. The JSON is processed directly in your
-            browser. Your data does not need to be uploaded
-            to a server.
-        </p>
-
-
-    </article>
-
-
-
-    <aside>
-
-        <div class="side-card">
-
-            <h3>
-                More JSON Tools
-            </h3>
-
-
-            <a href="../">
-                JSON Toolkit
-            </a>
-
-
-            <a href="../json-formatter/">
-                JSON Formatter
-            </a>
-
-
-            <a href="../json-validator/">
-                JSON Validator
-            </a>
-
-
-            <a href="./">
-                JSON Minifier
-            </a>
-
-
-        </div>
-
-    </aside>
-
-
-</div>
-
-</section></main><footer><div class="container">
-
-    <p>
-        © 2026 JSON Toolkit
-    </p>
-
-</div>
-
-</footer><script src="script.js"></script><script>
-
-    const themeToggle =
-        document.getElementById("themeToggle");
-
-
-    function setTheme(isDark) {
-
-        document.body.classList.toggle(
-            "dark-mode",
-            isDark
-        );
-
-
-        themeToggle.textContent =
-            isDark ? "☀️" : "🌙";
-
-
-        themeToggle.setAttribute(
-            "aria-label",
-            isDark
-                ? "Switch to light mode"
-                : "Switch to dark mode"
-        );
-
-
-        themeToggle.setAttribute(
-            "title",
-            isDark
-                ? "Switch to light mode"
-                : "Switch to dark mode"
-        );
-
-
-        localStorage.setItem(
-            "jsonToolkitDarkMode",
-            isDark ? "true" : "false"
-        );
-
-    }
-
-
-    const savedTheme =
-        localStorage.getItem(
-            "jsonToolkitDarkMode"
-        );
-
-
-    setTheme(savedTheme === "true");
-
-
-    themeToggle.addEventListener(
-        "click",
-        function () {
-
-            const isDark =
-                !document.body.classList.contains(
-                    "dark-mode"
-                );
-
-            setTheme(isDark);
-
-        }
+    document.body.classList.toggle(
+        "dark-mode",
+        isDark
     );
 
-</script></body></html>
+    themeToggle.textContent =
+        isDark ? "☀️" : "🌙";
+
+    themeToggle.setAttribute(
+        "aria-label",
+        isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+    );
+
+    themeToggle.setAttribute(
+        "title",
+        isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+    );
+
+    localStorage.setItem(
+        "jsonToolkitDarkMode",
+        isDark ? "true" : "false"
+    );
+
+}
+
+
+const savedTheme =
+    localStorage.getItem(
+        "jsonToolkitDarkMode"
+    );
+
+
+setTheme(savedTheme === "true");
+
+
+themeToggle.addEventListener(
+    "click",
+    function () {
+
+        const isDark =
+            !document.body.classList.contains(
+                "dark-mode"
+            );
+
+        setTheme(isDark);
+
+    }
+);
+
+</script></body>
+</html>
