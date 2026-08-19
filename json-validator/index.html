@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>JSON Validator - Validate JSON Online Free | JSON Toolkit</title>
+
+    <meta name="description"
+          content="Validate JSON online for free. Check JSON syntax, find errors, and identify the line and column where invalid JSON occurs.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://hhgg44hg-art.github.io/json-toolkit/json-validator/">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container nav">
+
+        <a class="brand" href="../">
+            JSON Toolkit
+        </a>
+
+        <nav>
+            <a href="../">Home</a>
+            <a href="../json-formatter/">JSON Formatter</a>
+            <a href="./">JSON Validator</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="badge">
+            Free Online Tool
+        </div>
+
+        <h1>
+            JSON Validator
+        </h1>
+
+        <p>
+            Validate JSON online instantly and find
+            syntax errors in your JSON data.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="tool-section">
+
+    <div class="container">
+
+        <div class="tool-card">
+
+            <div class="tool-header">
+
+                <div>
+
+                    <h2>
+                        Validate your JSON
+                    </h2>
+
+                    <p>
+                        Paste your JSON below and check whether it is valid.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="jsonInput"
+                spellcheck="false"
+                placeholder='Paste JSON here...
+
+Example:
+{
+  "name": "Hamoud",
+  "age": 22,
+  "active": true
+}'
+            ></textarea>
+
+
+            <div class="actions">
+
+                <button id="validateBtn">
+                    Validate JSON
+                </button>
+
+                <button id="clearBtn" class="secondary">
+                    Clear
+                </button>
+
+                <button id="exampleBtn" class="secondary">
+                    Load Example
+                </button>
+
+            </div>
+
+
+            <div id="result" class="result hidden">
+
+                <div id="resultIcon" class="result-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h3 id="resultTitle">
+                        Valid JSON
+                    </h3>
+
+                    <p id="resultMessage">
+                        Your JSON is valid.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="errorDetails"
+                 class="error-details hidden">
+
+                <h3>
+                    Error Details
+                </h3>
+
+                <pre id="errorMessage"></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="content">
+
+    <div class="container content-grid">
+
+        <article>
+
+            <h2>
+                What is a JSON Validator?
+            </h2>
+
+            <p>
+                A JSON Validator checks whether a JSON document
+                follows the correct JSON syntax. It can help identify
+                missing commas, incorrect quotation marks, missing
+                brackets, and other common JSON errors.
+            </p>
+
+
+            <h2>
+                How to validate JSON
+            </h2>
+
+            <ol>
+
+                <li>
+                    Paste your JSON into the editor.
+                </li>
+
+                <li>
+                    Click <strong>Validate JSON</strong>.
+                </li>
+
+                <li>
+                    If the JSON is valid, you will see a success message.
+                </li>
+
+                <li>
+                    If it is invalid, the tool will display the
+                    JavaScript parsing error.
+                </li>
+
+            </ol>
+
+
+            <h2>
+                Common JSON errors
+            </h2>
+
+            <ul>
+
+                <li>
+                    Missing commas between properties.
+                </li>
+
+                <li>
+                    Using single quotes instead of double quotes.
+                </li>
+
+                <li>
+                    Missing closing brackets or braces.
+                </li>
+
+                <li>
+                    Adding an extra comma at the end of an object.
+                </li>
+
+                <li>
+                    Using invalid values or syntax.
+                </li>
+
+            </ul>
+
+
+            <h2>
+                Is this JSON Validator free?
+            </h2>
+
+            <p>
+                Yes. JSON Toolkit's JSON Validator is free to use
+                directly in your browser.
+            </p>
+
+
+            <h2>
+                Is my JSON uploaded?
+            </h2>
+
+            <p>
+                No. Validation is performed directly in your browser.
+                Your JSON is not sent to a server by this tool.
+            </p>
+
+        </article>
+
+
+        <aside>
+
+            <div class="side-card">
+
+                <h3>
+                    More JSON Tools
+                </h3>
+
+                <a href="../">
+                    JSON Toolkit
+                </a>
+
+                <a href="../json-formatter/">
+                    JSON Formatter
+                </a>
+
+                <a href="./">
+                    JSON Validator
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 JSON Toolkit
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
