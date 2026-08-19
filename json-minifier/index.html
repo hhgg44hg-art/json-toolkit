@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSON Minifier - Minify JSON Online Free | JSON Toolkit</title>
+
+    <meta name="description"
+          content="Minify and compress JSON online for free. Remove unnecessary spaces and formatting from JSON directly in your browser.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://hhgg44hg-art.github.io/json-toolkit/json-minifier/">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container nav">
+
+        <a class="brand" href="../">
+            JSON Toolkit
+        </a>
+
+        <nav>
+            <a href="../">Home</a>
+            <a href="../json-formatter/">JSON Formatter</a>
+            <a href="../json-validator/">JSON Validator</a>
+            <a href="./">JSON Minifier</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="badge">
+            Free Online Tool
+        </div>
+
+        <h1>
+            JSON Minifier
+        </h1>
+
+        <p>
+            Minify and compress JSON online by removing
+            unnecessary spaces and formatting.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="tool-section">
+
+    <div class="container">
+
+        <div class="tool-card">
+
+            <div class="tool-header">
+
+                <h2>
+                    Minify your JSON
+                </h2>
+
+                <p>
+                    Paste your JSON below and remove unnecessary whitespace.
+                </p>
+
+            </div>
+
+
+            <textarea
+                id="jsonInput"
+                spellcheck="false"
+                placeholder='Paste JSON here...
+
+Example:
+{
+  "name": "Hamoud",
+  "age": 22,
+  "active": true
+}'
+            ></textarea>
+
+
+            <div class="actions">
+
+                <button id="minifyBtn">
+                    Minify JSON
+                </button>
+
+                <button id="clearBtn" class="secondary">
+                    Clear
+                </button>
+
+                <button id="exampleBtn" class="secondary">
+                    Load Example
+                </button>
+
+            </div>
+
+
+            <div id="result" class="result hidden">
+
+                <div>
+
+                    <h3 id="resultTitle">
+                        JSON Minified
+                    </h3>
+
+                    <p id="resultMessage">
+                        Your JSON has been successfully minified.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="outputSection" class="output-section hidden">
+
+                <div class="output-header">
+
+                    <h3>
+                        Minified JSON
+                    </h3>
+
+                    <button id="copyBtn" class="copy-button">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <textarea
+                    id="output"
+                    readonly
+                    spellcheck="false"
+                ></textarea>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span>Original size</span>
+                        <strong id="originalSize">0 bytes</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Minified size</span>
+                        <strong id="minifiedSize">0 bytes</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Space saved</span>
+                        <strong id="savedSize">0%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="errorDetails"
+                 class="error-details hidden">
+
+                <h3>
+                    Invalid JSON
+                </h3>
+
+                <pre id="errorMessage"></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="content">
+
+    <div class="container content-grid">
+
+        <article>
+
+            <h2>
+                What is JSON Minification?
+            </h2>
+
+            <p>
+                JSON minification removes unnecessary whitespace,
+                line breaks, and indentation from JSON data while
+                keeping the data itself unchanged.
+            </p>
+
+
+            <h2>
+                Why minify JSON?
+            </h2>
+
+            <p>
+                Smaller JSON files can reduce the amount of data
+                transferred between applications and servers.
+                This can be useful for APIs, configuration files,
+                and web applications.
+            </p>
+
+
+            <h2>
+                How to minify JSON
+            </h2>
+
+            <ol>
+
+                <li>
+                    Paste your JSON into the input box.
+                </li>
+
+                <li>
+                    Click <strong>Minify JSON</strong>.
+                </li>
+
+                <li>
+                    Copy the compressed JSON.
+                </li>
+
+            </ol>
+
+
+            <h2>
+                Is this JSON Minifier free?
+            </h2>
+
+            <p>
+                Yes. JSON Toolkit's JSON Minifier is free to use
+                directly in your browser.
+            </p>
+
+
+            <h2>
+                Is my JSON uploaded?
+            </h2>
+
+            <p>
+                No. The JSON is processed directly in your browser.
+                Your data does not need to be uploaded to a server.
+            </p>
+
+        </article>
+
+
+        <aside>
+
+            <div class="side-card">
+
+                <h3>
+                    More JSON Tools
+                </h3>
+
+                <a href="../">
+                    JSON Toolkit
+                </a>
+
+                <a href="../json-formatter/">
+                    JSON Formatter
+                </a>
+
+                <a href="../json-validator/">
+                    JSON Validator
+                </a>
+
+                <a href="./">
+                    JSON Minifier
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 JSON Toolkit
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
