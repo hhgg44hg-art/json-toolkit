@@ -1,19 +1,31 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>
     JSON Minifier - Minify JSON Online Free | JSON Toolkit
-</title><meta name="description"
-content="Minify and compress JSON online for free. Remove unnecessary spaces and formatting from JSON directly in your browser.">
+</title>
+
+<meta name="description"
+      content="Minify and compress JSON online for free. Remove unnecessary spaces and formatting from JSON directly in your browser.">
 
 <meta name="robots"
-content="index, follow">
+      content="index, follow">
 
 <link rel="canonical"
-      href="https://hhgg44hg-art.github.io/json-toolkit/json-minifier/"><link rel="stylesheet"
-      href="style.css"><style>
+      href="https://hhgg44hg-art.github.io/json-toolkit/json-minifier/">
+
+<link rel="stylesheet"
+      href="style.css">
+
+
+<style>
 
     .page-header {
         display: flex;
@@ -287,7 +299,20 @@ content="index, follow">
 
     }
 
-</style></head><body><header class="site-header"><div class="container nav"><div class="page-header">
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+<div class="container nav">
+
+
+<div class="page-header">
 
     <button
         id="themeToggle"
@@ -299,6 +324,7 @@ content="index, follow">
         🌙
 
     </button>
+
 
     <a class="brand"
        href="../">
@@ -330,46 +356,81 @@ content="index, follow">
 
 </nav>
 
-</div></header><main><section class="hero"><div class="container"><div class="badge">
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+<div class="container">
+
+
+<div class="badge">
     Free Online Tool
 </div>
+
 
 <h1>
     JSON Minifier
 </h1>
+
 
 <p>
     Minify and compress JSON online by removing
     unnecessary spaces and formatting.
 </p>
 
-</div></section><!-- AD #1 --><div class="container"><div class="ad-placeholder"
+
+</div>
+
+</section>
+
+
+<!-- AD #1 -->
+
+<div class="container">
+
+<div class="ad-placeholder"
      aria-label="Advertisement">
 
     AD
 
 </div>
 
-</div><section class="tool-section"><div class="container"><div class="tool-card">
-
-    <div class="tool-header">
-
-        <h2>
-            Minify your JSON
-        </h2>
-
-        <p>
-            Paste your JSON below and remove
-            unnecessary whitespace.
-        </p>
-
-    </div>
+</div>
 
 
-    <textarea
-        id="jsonInput"
-        spellcheck="false"
-        placeholder='Paste JSON here...
+<section class="tool-section">
+
+<div class="container">
+
+<div class="tool-card">
+
+
+<div class="tool-header">
+
+    <h2>
+        Minify your JSON
+    </h2>
+
+
+    <p>
+        Paste your JSON below and remove
+        unnecessary whitespace.
+    </p>
+
+</div>
+
+
+<textarea
+    id="jsonInput"
+    spellcheck="false"
+    placeholder='Paste JSON here...
 
 Example:
 {
@@ -377,150 +438,185 @@ Example:
 "age": 22,
 "active": true
 }'
-
-«</textarea>»
-
-    <div class="actions">
-
-        <button id="minifyBtn">
-            Minify JSON
-        </button>
-
-        <button
-            id="clearBtn"
-            class="secondary">
-
-            Clear
-
-        </button>
-
-        <button
-            id="exampleBtn"
-            class="secondary">
-
-            Load Example
-
-        </button>
-
-    </div>
+></textarea>
 
 
-    <div id="result"
-         class="result hidden">
-
-        <div>
-
-            <h3 id="resultTitle">
-                JSON Minified
-            </h3>
-
-            <p id="resultMessage">
-                Your JSON has been successfully
-                minified.
-            </p>
-
-        </div>
-
-    </div>
+<div class="actions">
 
 
-    <div id="outputSection"
-         class="output-section hidden">
-
-        <div class="output-header">
-
-            <h3>
-                Minified JSON
-            </h3>
-
-            <button
-                id="copyBtn"
-                class="copy-button">
-
-                Copy
-
-            </button>
-
-        </div>
+    <button id="minifyBtn">
+        Minify JSON
+    </button>
 
 
-        <textarea
-            id="output"
-            readonly
-            spellcheck="false"
-        ></textarea>
+    <button
+        id="clearBtn"
+        class="secondary">
+
+        Clear
+
+    </button>
 
 
-        <div class="stats">
+    <button
+        id="exampleBtn"
+        class="secondary">
 
-            <div class="stat">
+        Load Example
 
-                <span>
-                    Original size
-                </span>
+    </button>
 
-                <strong id="originalSize">
-                    0 bytes
-                </strong>
-
-            </div>
-
-
-            <div class="stat">
-
-                <span>
-                    Minified size
-                </span>
-
-                <strong id="minifiedSize">
-                    0 bytes
-                </strong>
-
-            </div>
-
-
-            <div class="stat">
-
-                <span>
-                    Space saved
-                </span>
-
-                <strong id="savedSize">
-                    0%
-                </strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div id="errorDetails"
-         class="error-details hidden">
-
-        <h3>
-            Invalid JSON
-        </h3>
-
-        <pre id="errorMessage"></pre>
-
-    </div>
 
 </div>
 
-</div></section><!-- AD #2 --><div class="container"><div class="ad-placeholder"
+
+<div id="result"
+     class="result hidden">
+
+
+    <div>
+
+        <h3 id="resultTitle">
+            JSON Minified
+        </h3>
+
+
+        <p id="resultMessage">
+            Your JSON has been successfully
+            minified.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<div id="outputSection"
+     class="output-section hidden">
+
+
+    <div class="output-header">
+
+        <h3>
+            Minified JSON
+        </h3>
+
+
+        <button
+            id="copyBtn"
+            class="copy-button">
+
+            Copy
+
+        </button>
+
+    </div>
+
+
+    <textarea
+        id="output"
+        readonly
+        spellcheck="false"
+    ></textarea>
+
+
+    <div class="stats">
+
+
+        <div class="stat">
+
+            <span>
+                Original size
+            </span>
+
+            <strong id="originalSize">
+                0 bytes
+            </strong>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span>
+                Minified size
+            </span>
+
+            <strong id="minifiedSize">
+                0 bytes
+            </strong>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span>
+                Space saved
+            </span>
+
+            <strong id="savedSize">
+                0%
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<div id="errorDetails"
+     class="error-details hidden">
+
+
+    <h3>
+        Invalid JSON
+    </h3>
+
+
+    <pre id="errorMessage"></pre>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AD #2 -->
+
+<div class="container">
+
+<div class="ad-placeholder"
      aria-label="Advertisement">
 
     AD
 
 </div>
 
-</div><section class="content"><div class="container content-grid"><article>
+</div>
+
+
+<section class="content">
+
+<div class="container content-grid">
+
+
+<article>
+
 
     <h2>
         What is JSON Minification?
     </h2>
+
 
     <p>
         JSON minification removes unnecessary whitespace,
@@ -533,6 +629,7 @@ Example:
         Why minify JSON?
     </h2>
 
+
     <p>
         Smaller JSON files can reduce the amount of data
         transferred between applications and servers.
@@ -544,6 +641,7 @@ Example:
     <h2>
         How to minify JSON
     </h2>
+
 
     <ol>
 
@@ -566,6 +664,7 @@ Example:
         Is this JSON Minifier free?
     </h2>
 
+
     <p>
         Yes. JSON Toolkit's JSON Minifier is free
         to use directly in your browser.
@@ -576,55 +675,91 @@ Example:
         Is my JSON uploaded?
     </h2>
 
+
     <p>
         No. The JSON is processed directly in your
         browser. Your data does not need to be uploaded
         to a server.
     </p>
 
+
 </article>
 
 
 <aside>
 
-    <div class="side-card">
+<div class="side-card">
 
-        <h3>
-            More JSON Tools
-        </h3>
 
-        <a href="../">
-            JSON Toolkit
-        </a>
+    <h3>
+        More JSON Tools
+    </h3>
 
-        <a href="../json-formatter/">
-            JSON Formatter
-        </a>
 
-        <a href="../json-validator/">
-            JSON Validator
-        </a>
+    <a href="../">
+        JSON Toolkit
+    </a>
 
-        <a href="./">
-            JSON Minifier
-        </a>
 
-    </div>
+    <a href="../json-formatter/">
+        JSON Formatter
+    </a>
+
+
+    <a href="../json-validator/">
+        JSON Validator
+    </a>
+
+
+    <a href="./">
+        JSON Minifier
+    </a>
+
+
+</div>
 
 </aside>
 
-</div></section><!-- AD #3 --><div class="container"><div class="ad-placeholder"
+
+</div>
+
+</section>
+
+
+<!-- AD #3 -->
+
+<div class="container">
+
+<div class="ad-placeholder"
      aria-label="Advertisement">
 
     AD
 
 </div>
 
-</div></main><footer><div class="container"><p>
+</div>
+
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<p>
     © 2026 JSON Toolkit
 </p>
 
-</div></footer><script src="script.js"></script><script>
+</div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
 
 const themeToggle =
     document.getElementById("themeToggle");
@@ -637,8 +772,10 @@ function setTheme(isDark) {
         isDark
     );
 
+
     themeToggle.textContent =
         isDark ? "☀️" : "🌙";
+
 
     themeToggle.setAttribute(
         "aria-label",
@@ -647,12 +784,14 @@ function setTheme(isDark) {
             : "Switch to dark mode"
     );
 
+
     themeToggle.setAttribute(
         "title",
         isDark
             ? "Switch to light mode"
             : "Switch to dark mode"
     );
+
 
     localStorage.setItem(
         "jsonToolkitDarkMode",
@@ -680,10 +819,15 @@ themeToggle.addEventListener(
                 "dark-mode"
             );
 
+
         setTheme(isDark);
 
     }
 );
 
-</script></body>
-    </html>
+</script>
+
+
+</body>
+
+</html>
