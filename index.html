@@ -1,206 +1,639 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
-    <title>JSON Toolkit - Free Online JSON Tools</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Free online JSON tools to format, validate, and minify JSON data directly in your browser.">
+<title>
+    JSON Toolkit - Free Online JSON Formatter, Validator & Minifier
+</title>
 
-    <meta name="robots" content="index, follow">
+<meta name="description"
+      content="Free online JSON tools to format, validate, and minify JSON. Fast, simple, secure, and processed directly in your browser.">
 
-    <link rel="canonical"
-          href="https://hhgg44hg-art.github.io/json-toolkit/">
+<meta name="robots"
+      content="index, follow">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+<link rel="canonical"
+      href="https://hhgg44hg-art.github.io/json-toolkit/">
 
-<body>
+<meta property="og:title"
+      content="JSON Toolkit - Free Online JSON Tools">
 
-<header class="site-header">
+<meta property="og:description"
+      content="Format, validate, and minify JSON online for free. Your data is processed directly in your browser.">
 
-    <div class="container nav">
+<meta property="og:type"
+      content="website">
 
-        <a class="brand" href="./">
+<meta property="og:url"
+      content="https://hhgg44hg-art.github.io/json-toolkit/">
+
+<meta name="theme-color"
+      content="#111827">
+
+<link rel="stylesheet"
+      href="style.css">
+
+
+<!-- Additional homepage styles -->
+
+<style>
+
+    /* =========================
+       AD PLACEHOLDERS
+    ========================= */
+
+    .ad-placeholder {
+        width: 100%;
+        min-height: 90px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 28px auto;
+
+        border: 1px dashed #9ca3af;
+        border-radius: 12px;
+
+        background: #f3f4f6;
+
+        color: #6b7280;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+
+    /* =========================
+       DARK MODE BUTTON
+    ========================= */
+
+    .theme-toggle {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid #d1d5db;
+        border-radius: 50%;
+
+        background: #ffffff;
+        color: #111827;
+
+        cursor: pointer;
+
+        font-size: 19px;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-2px);
+    }
+
+
+    /* Header layout */
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+
+    /* Hero improvement */
+
+    .hero {
+        position: relative;
+    }
+
+    .hero h1 {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero p {
+        max-width: 720px;
+    }
+
+
+    /* Tool cards */
+
+    .tool-link {
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .tool-link:hover {
+        transform: translateY(-4px);
+    }
+
+
+    /* Privacy note */
+
+    .privacy-note {
+        margin-top: 24px;
+
+        padding: 16px 18px;
+
+        border-radius: 10px;
+
+        background: #f3f4f6;
+
+        color: #4b5563;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    body.dark-mode {
+        background: #0f172a;
+        color: #e5e7eb;
+    }
+
+    body.dark-mode .site-header {
+        background: #111827;
+        border-color: #1f2937;
+    }
+
+    body.dark-mode .brand {
+        color: #f9fafb;
+    }
+
+    body.dark-mode nav a {
+        color: #cbd5e1;
+    }
+
+    body.dark-mode nav a:hover {
+        color: #ffffff;
+    }
+
+    body.dark-mode .theme-toggle {
+        background: #1f2937;
+        border-color: #374151;
+        color: #f9fafb;
+    }
+
+    body.dark-mode .hero h1,
+    body.dark-mode .hero h2,
+    body.dark-mode .tools-section h2,
+    body.dark-mode .about-section h2 {
+        color: #f9fafb;
+    }
+
+    body.dark-mode .hero p,
+    body.dark-mode .section-description,
+    body.dark-mode .about-section p {
+        color: #cbd5e1;
+    }
+
+    body.dark-mode .badge {
+        background: #1e293b;
+        color: #a5b4fc;
+    }
+
+    body.dark-mode .tool-link {
+        background: #111827;
+        border-color: #374151;
+    }
+
+    body.dark-mode .tool-link h3 {
+        color: #f9fafb;
+    }
+
+    body.dark-mode .tool-link p {
+        color: #cbd5e1;
+    }
+
+    body.dark-mode .tool-button {
+        color: #a5b4fc;
+    }
+
+    body.dark-mode .about-section {
+        background: #111827;
+    }
+
+    body.dark-mode .privacy-note {
+        background: #1f2937;
+        color: #cbd5e1;
+    }
+
+    body.dark-mode footer {
+        background: #0b1120;
+        color: #94a3b8;
+    }
+
+    body.dark-mode .ad-placeholder {
+        background: #1f2937;
+        border-color: #475569;
+        color: #94a3b8;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        .nav {
+            align-items: center;
+        }
+
+        .nav-left {
+            gap: 10px;
+        }
+
+        .theme-toggle {
+            width: 38px;
+            height: 38px;
+        }
+
+        .hero {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .ad-placeholder {
+            min-height: 75px;
+        }
+
+    }
+
+</style>
+
+</head><body><header class="site-header"><div class="container nav">
+
+
+    <!-- Top-left controls -->
+
+    <div class="nav-left">
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode">
+
+            🌙
+
+        </button>
+
+
+        <a class="brand"
+           href="./">
+
             JSON Toolkit
+
         </a>
 
-        <nav>
-            <a href="./">Home</a>
-            <a href="json-formatter/">JSON Formatter</a>
-            <a href="json-validator/">JSON Validator</a>
-            <a href="json-minifier/">JSON Minifier</a>
-        </nav>
+    </div>
+
+
+    <nav>
+
+        <a href="./">
+            Home
+        </a>
+
+        <a href="json-formatter/">
+            JSON Formatter
+        </a>
+
+        <a href="json-validator/">
+            JSON Validator
+        </a>
+
+        <a href="json-minifier/">
+            JSON Minifier
+        </a>
+
+    </nav>
+
+
+</div>
+
+</header><main><!-- HERO --><section class="hero"><div class="container">
+
+
+    <div class="badge">
+
+        Free Online JSON Tools
 
     </div>
 
-</header>
+
+    <h1>
+
+        Simple, Fast & Free JSON Tools
+
+    </h1>
 
 
-<main>
+    <p>
 
-<section class="hero">
+        Format, validate, and minify JSON directly
+        in your browser. No installation required.
 
-    <div class="container">
+    </p>
 
-        <div class="badge">
-            Free Online JSON Tools
-        </div>
 
-        <h1>
-            Simple JSON Tools
-        </h1>
+</div>
 
-        <p>
-            Free online tools for formatting, validating,
-            and minifying JSON data directly in your browser.
-        </p>
+</section><!-- AD #1 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">
+
+    AD
+
+</div>
+
+</div><!-- TOOLS --><section class="tools-section"><div class="container">
+
+
+    <h2>
+
+        JSON Tools
+
+    </h2>
+
+
+    <p class="section-description">
+
+        Free browser-based tools for developers,
+        students, and anyone working with JSON data.
+
+    </p>
+
+
+
+    <div class="tools-grid">
+
+
+        <!-- Formatter -->
+
+        <a class="tool-link"
+           href="json-formatter/">
+
+            <div class="tool-icon">
+
+                {}
+
+            </div>
+
+
+            <h3>
+
+                JSON Formatter
+
+            </h3>
+
+
+            <p>
+
+                Format and beautify JSON online.
+                Validate your JSON and make it easier to read.
+
+            </p>
+
+
+            <span class="tool-button">
+
+                Open Tool →
+
+            </span>
+
+        </a>
+
+
+
+        <!-- Validator -->
+
+        <a class="tool-link"
+           href="json-validator/">
+
+            <div class="tool-icon">
+
+                ✓
+
+            </div>
+
+
+            <h3>
+
+                JSON Validator
+
+            </h3>
+
+
+            <p>
+
+                Validate JSON online, find syntax errors,
+                and identify the line and column of the problem.
+
+            </p>
+
+
+            <span class="tool-button">
+
+                Open Tool →
+
+            </span>
+
+        </a>
+
+
+
+        <!-- Minifier -->
+
+        <a class="tool-link"
+           href="json-minifier/">
+
+            <div class="tool-icon">
+
+                ↓
+
+            </div>
+
+
+            <h3>
+
+                JSON Minifier
+
+            </h3>
+
+
+            <p>
+
+                Remove unnecessary spaces and formatting
+                to compress JSON into a smaller format.
+
+            </p>
+
+
+            <span class="tool-button">
+
+                Open Tool →
+
+            </span>
+
+        </a>
+
 
     </div>
 
-</section>
+
+</div>
+
+</section><!-- AD #2 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">
+
+    AD
+
+</div>
+
+</div><!-- ABOUT --><section class="about-section"><div class="container">
 
 
-<section class="tools-section">
+    <h2>
 
-    <div class="container">
+        Free JSON Tools
 
-        <h2>
-            JSON Tools
-        </h2>
-
-        <p class="section-description">
-            Useful free tools for developers and anyone
-            working with JSON data.
-        </p>
+    </h2>
 
 
-        <div class="tools-grid">
+    <p>
+
+        JSON Toolkit provides simple browser-based tools
+        for formatting, validating, and minifying JSON data.
+        The tools are designed to be fast, easy to use,
+        and accessible without installing software.
+
+    </p>
 
 
-            <!-- JSON Formatter -->
+    <p>
 
-            <a class="tool-link" href="json-formatter/">
+        JSON processing is performed directly in your
+        browser whenever possible. Your JSON data does
+        not need to be uploaded to a server.
 
-                <div class="tool-icon">
-                    {}
-                </div>
-
-                <h3>
-                    JSON Formatter
-                </h3>
-
-                <p>
-                    Format and beautify JSON online.
-                    Validate your JSON and make it easier to read.
-                </p>
-
-                <span class="tool-button">
-                    Open Tool →
-                </span>
-
-            </a>
+    </p>
 
 
-            <!-- JSON Validator -->
+    <div class="privacy-note">
 
-            <a class="tool-link" href="json-validator/">
-
-                <div class="tool-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    JSON Validator
-                </h3>
-
-                <p>
-                    Validate JSON online, find syntax errors,
-                    and identify the line and column of the problem.
-                </p>
-
-                <span class="tool-button">
-                    Open Tool →
-                </span>
-
-            </a>
-
-
-            <!-- JSON Minifier -->
-
-            <a class="tool-link" href="json-minifier/">
-
-                <div class="tool-icon">
-                    ↓
-                </div>
-
-                <h3>
-                    JSON Minifier
-                </h3>
-
-                <p>
-                    Remove unnecessary spaces and formatting
-                    to compress JSON into a smaller format.
-                </p>
-
-                <span class="tool-button">
-                    Open Tool →
-                </span>
-
-            </a>
-
-
-        </div>
+        🔒 <strong>Your data stays in your browser.</strong>
+        JSON Toolkit processes JSON locally whenever possible,
+        helping keep your data private.
 
     </div>
 
-</section>
+
+</div>
+
+</section><!-- AD #3 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">
+
+    AD
+
+</div>
+
+</div></main><footer><div class="container">
+
+    <p>
+
+        © 2026 JSON Toolkit
+
+    </p>
+
+</div>
+
+</footer><!-- Dark mode --><script>
+
+    const themeToggle =
+        document.getElementById("themeToggle");
 
 
-<section class="about-section">
+    function setTheme(isDark) {
 
-    <div class="container">
-
-        <h2>
-            Free JSON Tools
-        </h2>
-
-        <p>
-            JSON Toolkit provides simple browser-based tools
-            for working with JSON. Our tools are designed to
-            be fast, easy to use, and accessible without
-            installing software.
-        </p>
-
-        <p>
-            JSON processing is performed directly in your
-            browser whenever possible, so your data does not
-            need to be uploaded to a server.
-        </p>
-
-    </div>
-
-</section>
-
-</main>
+        document.body.classList.toggle(
+            "dark-mode",
+            isDark
+        );
 
 
-<footer>
-
-    <div class="container">
-
-        <p>
-            © 2026 JSON Toolkit
-        </p>
-
-    </div>
-
-</footer>
+        themeToggle.textContent =
+            isDark ? "☀️" : "🌙";
 
 
-<script src="script.js"></script>
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+        );
 
-</body>
-</html>
+
+        localStorage.setItem(
+            "jsonToolkitDarkMode",
+            isDark ? "true" : "false"
+        );
+
+    }
+
+
+    const savedTheme =
+        localStorage.getItem(
+            "jsonToolkitDarkMode"
+        );
+
+
+    if (savedTheme === "true") {
+
+        setTheme(true);
+
+    } else {
+
+        setTheme(false);
+
+    }
+
+
+    themeToggle.addEventListener(
+        "click",
+        () => {
+
+            const isDark =
+                !document.body.classList.contains(
+                    "dark-mode"
+                );
+
+            setTheme(isDark);
+
+        }
+    );
+
+</script></body></html>
