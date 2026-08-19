@@ -36,6 +36,7 @@ content="index, follow">
         color: #111827;
 
         cursor: pointer;
+
         font-size: 18px;
 
         transition:
@@ -46,6 +47,37 @@ content="index, follow">
 
     .theme-toggle:hover {
         transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       AD PLACEHOLDERS
+    ========================= */
+
+    .ad-placeholder {
+        width: 100%;
+        min-height: 90px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 28px auto;
+
+        border: 1px dashed #9ca3af;
+        border-radius: 12px;
+
+        background: #f3f4f6;
+        color: #6b7280;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            border-color 0.25s ease;
     }
 
 
@@ -183,6 +215,15 @@ content="index, follow">
     }
 
 
+    /* Ads */
+
+    body.dark-mode .ad-placeholder {
+        background: #1f2937 !important;
+        border-color: #475569 !important;
+        color: #94a3b8 !important;
+    }
+
+
     /* Content */
 
     body.dark-mode .content {
@@ -238,6 +279,10 @@ content="index, follow">
         .theme-toggle {
             width: 38px;
             height: 38px;
+        }
+
+        .ad-placeholder {
+            min-height: 75px;
         }
 
     }
@@ -298,7 +343,14 @@ content="index, follow">
     unnecessary spaces and formatting.
 </p>
 
-</div></section><section class="tool-section"><div class="container"><div class="tool-card">
+</div></section><!-- AD #1 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">
+
+    AD
+
+</div>
+
+</div><section class="tool-section"><div class="container"><div class="tool-card">
 
     <div class="tool-header">
 
@@ -457,7 +509,14 @@ Example:
 
 </div>
 
-</div></section><section class="content"><div class="container content-grid"><article>
+</div></section><!-- AD #2 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">
+
+    AD
+
+</div>
+
+</div><section class="content"><div class="container content-grid"><article>
 
     <h2>
         What is JSON Minification?
@@ -554,7 +613,14 @@ Example:
 
 </aside>
 
-</div></section></main><footer><div class="container"><p>
+</div></section><!-- AD #3 --><div class="container"><div class="ad-placeholder"
+     aria-label="Advertisement">
+
+    AD
+
+</div>
+
+</div></main><footer><div class="container"><p>
     © 2026 JSON Toolkit
 </p>
 
@@ -620,4 +686,4 @@ themeToggle.addEventListener(
 );
 
 </script></body>
-</html>
+    </html>
