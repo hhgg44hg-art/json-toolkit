@@ -1,7 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
     JSON Toolkit - Free Online JSON Formatter, Validator & Minifier
@@ -35,8 +34,6 @@
       href="style.css">
 
 
-<!-- Additional homepage styles -->
-
 <style>
 
     /* =========================
@@ -57,7 +54,6 @@
         border-radius: 12px;
 
         background: #f3f4f6;
-
         color: #6b7280;
 
         font-size: 14px;
@@ -74,6 +70,12 @@
     /* =========================
        DARK MODE BUTTON
     ========================= */
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
 
     .theme-toggle {
         width: 42px;
@@ -104,24 +106,9 @@
     }
 
 
-    /* Header layout */
-
-    .nav {
-        gap: 20px;
-    }
-
-    .nav-left {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-    }
-
-
-    /* Hero improvement */
-
-    .hero {
-        position: relative;
-    }
+    /* =========================
+       HERO
+    ========================= */
 
     .hero h1 {
         max-width: 850px;
@@ -134,12 +121,16 @@
     }
 
 
-    /* Tool cards */
+    /* =========================
+       TOOL CARDS
+    ========================= */
 
     .tool-link {
         transition:
             transform 0.2s ease,
-            box-shadow 0.2s ease;
+            box-shadow 0.2s ease,
+            background 0.25s ease,
+            border-color 0.25s ease;
     }
 
     .tool-link:hover {
@@ -147,7 +138,9 @@
     }
 
 
-    /* Privacy note */
+    /* =========================
+       PRIVACY NOTE
+    ========================= */
 
     .privacy-note {
         margin-top: 24px;
@@ -157,7 +150,6 @@
         border-radius: 10px;
 
         background: #f3f4f6;
-
         color: #4b5563;
 
         font-size: 14px;
@@ -169,25 +161,28 @@
     ========================= */
 
     body.dark-mode {
-        background: #0f172a;
+        background: #0f172a !important;
         color: #e5e7eb;
     }
 
+
+    /* Header */
+
     body.dark-mode .site-header {
-        background: #111827;
-        border-color: #1f2937;
+        background: #111827 !important;
+        border-color: #1f2937 !important;
     }
 
     body.dark-mode .brand {
-        color: #f9fafb;
+        color: #f9fafb !important;
     }
 
     body.dark-mode nav a {
-        color: #cbd5e1;
+        color: #cbd5e1 !important;
     }
 
     body.dark-mode nav a:hover {
-        color: #ffffff;
+        color: #ffffff !important;
     }
 
     body.dark-mode .theme-toggle {
@@ -196,59 +191,116 @@
         color: #f9fafb;
     }
 
-    body.dark-mode .hero h1,
-    body.dark-mode .hero h2,
-    body.dark-mode .tools-section h2,
-    body.dark-mode .about-section h2 {
-        color: #f9fafb;
+
+    /* Hero */
+
+    body.dark-mode .hero {
+        background: #0f172a !important;
     }
 
-    body.dark-mode .hero p,
-    body.dark-mode .section-description,
-    body.dark-mode .about-section p {
-        color: #cbd5e1;
+    body.dark-mode .hero h1 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .hero p {
+        color: #cbd5e1 !important;
     }
 
     body.dark-mode .badge {
-        background: #1e293b;
-        color: #a5b4fc;
+        background: #1e293b !important;
+        color: #a5b4fc !important;
     }
 
+
+    /* Tools section */
+
+    body.dark-mode .tools-section {
+        background: #0f172a !important;
+    }
+
+    body.dark-mode .tools-section h2 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .section-description {
+        color: #cbd5e1 !important;
+    }
+
+
+    /* THE IMPORTANT FIX:
+       Tool cards */
+
     body.dark-mode .tool-link {
-        background: #111827;
-        border-color: #374151;
+        background: #111827 !important;
+        border-color: #374151 !important;
+        color: #e5e7eb !important;
+
+        box-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    body.dark-mode .tool-link:hover {
+        background: #172033 !important;
+        border-color: #4b5563 !important;
     }
 
     body.dark-mode .tool-link h3 {
-        color: #f9fafb;
+        color: #f9fafb !important;
     }
 
     body.dark-mode .tool-link p {
-        color: #cbd5e1;
+        color: #cbd5e1 !important;
     }
 
     body.dark-mode .tool-button {
-        color: #a5b4fc;
+        color: #a5b4fc !important;
     }
+
+    body.dark-mode .tool-icon {
+        background: #1e293b !important;
+        color: #a5b4fc !important;
+        border-color: #334155 !important;
+    }
+
+
+    /* About */
 
     body.dark-mode .about-section {
-        background: #111827;
+        background: #111827 !important;
     }
+
+    body.dark-mode .about-section h2 {
+        color: #f9fafb !important;
+    }
+
+    body.dark-mode .about-section p {
+        color: #cbd5e1 !important;
+    }
+
+
+    /* Privacy */
 
     body.dark-mode .privacy-note {
-        background: #1f2937;
-        color: #cbd5e1;
+        background: #1f2937 !important;
+        color: #cbd5e1 !important;
+        border-color: #374151;
     }
 
-    body.dark-mode footer {
-        background: #0b1120;
-        color: #94a3b8;
-    }
+
+    /* Ads */
 
     body.dark-mode .ad-placeholder {
-        background: #1f2937;
-        border-color: #475569;
-        color: #94a3b8;
+        background: #1f2937 !important;
+        border-color: #475569 !important;
+        color: #94a3b8 !important;
+    }
+
+
+    /* Footer */
+
+    body.dark-mode footer {
+        background: #0b1120 !important;
+        color: #94a3b8 !important;
     }
 
 
@@ -257,10 +309,6 @@
     ========================= */
 
     @media (max-width: 700px) {
-
-        .nav {
-            align-items: center;
-        }
 
         .nav-left {
             gap: 10px;
@@ -286,8 +334,6 @@
 
 </head><body><header class="site-header"><div class="container nav">
 
-
-    <!-- Top-left controls -->
 
     <div class="nav-left">
 
@@ -336,30 +382,22 @@
 
 </div>
 
-</header><main><!-- HERO --><section class="hero"><div class="container">
-
+</header><main><section class="hero"><div class="container">
 
     <div class="badge">
-
         Free Online JSON Tools
-
     </div>
 
 
     <h1>
-
         Simple, Fast & Free JSON Tools
-
     </h1>
 
 
     <p>
-
         Format, validate, and minify JSON directly
         in your browser. No installation required.
-
     </p>
-
 
 </div>
 
@@ -370,13 +408,11 @@
 
 </div>
 
-</div><!-- TOOLS --><section class="tools-section"><div class="container">
+</div><section class="tools-section"><div class="container">
 
 
     <h2>
-
         JSON Tools
-
     </h2>
 
 
@@ -392,118 +428,93 @@
     <div class="tools-grid">
 
 
-        <!-- Formatter -->
+        <!-- JSON Formatter -->
 
         <a class="tool-link"
            href="json-formatter/">
 
             <div class="tool-icon">
-
                 {}
-
             </div>
 
 
             <h3>
-
                 JSON Formatter
-
             </h3>
 
 
             <p>
-
                 Format and beautify JSON online.
                 Validate your JSON and make it easier to read.
-
             </p>
 
 
             <span class="tool-button">
-
                 Open Tool →
-
             </span>
 
         </a>
 
 
 
-        <!-- Validator -->
+        <!-- JSON Validator -->
 
         <a class="tool-link"
            href="json-validator/">
 
             <div class="tool-icon">
-
                 ✓
-
             </div>
 
 
             <h3>
-
                 JSON Validator
-
             </h3>
 
 
             <p>
-
                 Validate JSON online, find syntax errors,
                 and identify the line and column of the problem.
-
             </p>
 
 
             <span class="tool-button">
-
                 Open Tool →
-
             </span>
 
         </a>
 
 
 
-        <!-- Minifier -->
+        <!-- JSON Minifier -->
 
         <a class="tool-link"
            href="json-minifier/">
 
             <div class="tool-icon">
-
                 ↓
-
             </div>
 
 
             <h3>
-
                 JSON Minifier
-
             </h3>
 
 
             <p>
-
                 Remove unnecessary spaces and formatting
                 to compress JSON into a smaller format.
-
             </p>
 
 
             <span class="tool-button">
-
                 Open Tool →
-
             </span>
 
         </a>
 
 
     </div>
-
 
 </div>
 
@@ -514,32 +525,26 @@
 
 </div>
 
-</div><!-- ABOUT --><section class="about-section"><div class="container">
+</div><section class="about-section"><div class="container">
 
 
     <h2>
-
         Free JSON Tools
-
     </h2>
 
 
     <p>
-
         JSON Toolkit provides simple browser-based tools
         for formatting, validating, and minifying JSON data.
         The tools are designed to be fast, easy to use,
         and accessible without installing software.
-
     </p>
 
 
     <p>
-
         JSON processing is performed directly in your
         browser whenever possible. Your JSON data does
         not need to be uploaded to a server.
-
     </p>
 
 
@@ -564,14 +569,12 @@
 </div></main><footer><div class="container">
 
     <p>
-
         © 2026 JSON Toolkit
-
     </p>
 
 </div>
 
-</footer><!-- Dark mode --><script>
+</footer><script>
 
     const themeToggle =
         document.getElementById("themeToggle");
@@ -597,6 +600,14 @@
         );
 
 
+        themeToggle.setAttribute(
+            "title",
+            isDark
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+        );
+
+
         localStorage.setItem(
             "jsonToolkitDarkMode",
             isDark ? "true" : "false"
@@ -611,20 +622,12 @@
         );
 
 
-    if (savedTheme === "true") {
-
-        setTheme(true);
-
-    } else {
-
-        setTheme(false);
-
-    }
+    setTheme(savedTheme === "true");
 
 
     themeToggle.addEventListener(
         "click",
-        () => {
+        function () {
 
             const isDark =
                 !document.body.classList.contains(
